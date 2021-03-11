@@ -22,30 +22,35 @@ This can be done if we start with the second letter: ['B', 'C', 'B', 'B', 'C']
 
 #mycode
 def fruits_into_baskets(fruits):
-  max_len, win_start = 0, 0
-  dict_fruits={}
 
-  for win_end in range(len(fruits)):
-    if fruits[win_end] not in dict_fruits:
-      dict_fruits[fruits[win_end]] = 1
-    else: 
-      dict_fruits[fruits[win_end]] += 1
+  start = 0
+  dic = {}
+  mx_fruits = float("-inf")
+
+  for end in range(len(fruits)):
+    right_fruit = fruits[end]
+    if right_fruit not in dic:
+      dic[right_fruit] = 0
+    dic[right_fruit]+=1
+
+    while len(dic) > 2:
+      left_fruit = fruits[start]
+      dic[left_fruit] -= 1
+      if dic[left_fruit] == 0:
+        del dic[left_fruit]
+      start += 1
     
-    while len(dict_fruits) >2:
-      if dict_fruits[fruits[win_start]] == 1:
-        del dict_fruits[fruits[win_start]]
-      else:
-        dict_fruits[fruits[win_start]] -= 1
-      win_start += 1 
+    temp = sum(list(dic.values()))
+    mx_fruits = max(temp,mx_fruits)
 
-    if len(dict_fruits) == 2:
-      max_len=max(max_len, sum(dict_fruits.values()))
-      
-  return max_len
+  if mx_fruits == float("-inf"):
+    return 0
+  
+  return mx_fruits
 
 
 #answer
-def fruits_into_baskets(fruits):
+def fruits_into_baskets2(fruits):
   window_start = 0
   max_length = 0
   fruit_frequency = {}
@@ -69,8 +74,8 @@ def fruits_into_baskets(fruits):
 
 
 def main():
-  print("Maximum number of fruits: " + str(fruits_into_baskets(['A', 'B', 'C', 'A', 'C'])))
-  print("Maximum number of fruits: " + str(fruits_into_baskets(['A', 'B', 'C', 'B', 'B', 'C'])))
+  print("Maximum number of fruits: " + str(fruits_into_baskets(['A', 'B', 'C', 'A', 'C'])),"=?",str(fruits_into_baskets2(['A', 'B', 'C', 'A', 'C'])))
+  print("Maximum number of fruits: " + str(fruits_into_baskets(['A', 'B', 'C', 'B', 'B', 'C'])),"=?",str(fruits_into_baskets2(['A', 'B', 'C', 'B', 'B', 'C'])))
 
 
 main()
@@ -78,18 +83,6 @@ main()
 
 
 '''
-Time Complexity 
-The time complexity of the above algorithm will be O(N) where ‘N’ is the number of characters in the input array. 
-The outer for loop runs for all characters and the inner while loop processes each character only once, therefore the time complexity of the algorithm will be O(N+N)which is asymptotically equivalent to O(N).
 
-Space Complexity 
-The algorithm runs in constant space O(1) as there can be a maximum of three types of fruits stored in the frequency map.
-
-Similar Problems 
-Problem 1: Longest Substring with at most 2 distinct characters
-
-Given a string, find the length of the longest substring in it with at most two distinct characters.
-
-Solution: This problem is exactly similar to our parent problem.
 '''
 
