@@ -22,31 +22,56 @@ Explanation: Longest substrings without any repeating characters are "abc" & "cd
 '''
 
 #mycode
+def non_repeat_substring_slow(str):
+  seen = {}
+  start = 0
+  result = float("-inf")
+  for end in range(len(str)):
+    right_ch = str[end]
+    if right_ch not in seen:
+      seen[right_ch] = 0
+    seen[right_ch]+=1
+
+    def condition(dic):
+      for v in dic.values():
+        if v > 1:
+          return False
+      return True
+
+    while not condition(seen):
+      left_ch = str[start]
+      seen[left_ch]-=1
+      if seen[left_ch] == 0:
+        del seen[left_ch]
+      start+=1
+    result = max(result,end-start+1)
+
+  if result == float("-inf"):
+    return 0
+  return result
+
+#mycode
 def non_repeat_substring(str):
-  max_len, win_start = 0, 0
-  dict_str={}
+  seen = {}
+  start = 0
+  result = float("-inf")
+  for end in range(len(str)):
+    right_ch = str[end]
 
-  for win_end in range(len(str)):
-    if str[win_end] not in dict_str:
-      dict_str[str[win_end]] = 1
-    else: 
-      dict_str[str[win_end]] += 1
+    if right_ch in seen:
+      last_seen = seen[right_ch]
+      start = max(start,last_seen+1)
     
-    while len(dict_str) < sum(dict_str.values()):
-      if dict_str[str[win_start]] == 1:
-        del dict_str[str[win_start]]
-      else:
-        dict_str[str[win_start]] -= 1
-      win_start += 1
-
-    if len(dict_str) == sum(dict_str.values()):
-      max_len=max(max_len, len(dict_str))
-  return max_len
+    seen[right_ch] = end
+    result = max(result,end-start+1)
 
 
+  if result == float("-inf"):
+    return 0
+  return result
 
 #answer
-def non_repeat_substring(str):
+def non_repeat_substring2(str):
   window_start = 0
   max_length = 0
   char_index_map = {}
@@ -68,9 +93,9 @@ def non_repeat_substring(str):
 
 
 def main():
-  print("Length of the longest substring: " + str(non_repeat_substring("aabccbb")))
-  print("Length of the longest substring: " + str(non_repeat_substring("abbbb")))
-  print("Length of the longest substring: " + str(non_repeat_substring("abccde")))
+
+  for i in ["aabccbb","abbbb","abccde"]:
+    print("Length of the longest substring:",non_repeat_substring(i),"=?",non_repeat_substring2(i))
 
 
 main()

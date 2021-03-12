@@ -15,8 +15,25 @@ Output: 9
 Explanation: Replace the '0' at index 6, 9, and 10 to have the longest contiguous subarray of 1s having length 9.
 '''
 
+def length_of_longest_substring(arr,k):
+  start = 0
+  mx = 0
+  max_ones = 0
+
+  for end in range(len(arr)):
+    if arr[end]==1:
+      max_ones +=1  
+    if end-start+1-max_ones > k:
+      if arr[start]==1:
+        max_ones-=1
+      start+=1
+    mx = max(mx,end-start+1)
+
+  return mx
+
+
 #mycode
-def length_of_longest_substring(arr, k):
+def length_of_longest_substring1(arr, k):
   win_start, max_len, cnt = 0, 0, 0
   zero_posi=[0] * (k+1)
 
@@ -36,8 +53,8 @@ def length_of_longest_substring(arr, k):
   return max_len
 
 
-  #answer
-  def length_of_longest_substring(arr, k):
+#answer
+def length_of_longest_substring2(arr, k):
   window_start, max_length, max_ones_count = 0, 0, 0
 
   # Try to extend the range [window_start, window_end]
@@ -60,9 +77,10 @@ def length_of_longest_substring(arr, k):
 
 
 def main():
-  print(length_of_longest_substring([0, 1, 1, 0, 0, 0, 1, 1, 0, 1, 1], 2))
-  print(length_of_longest_substring(
-    [0, 1, 0, 0, 1, 1, 0, 1, 1, 0, 0, 1, 1], 3))
+
+  print(length_of_longest_substring([0, 1, 1, 0, 0, 0, 1, 1, 0, 1, 1], 2),"=?",length_of_longest_substring1([0, 1, 1, 0, 0, 0, 1, 1, 0, 1, 1], 2))
+  print(length_of_longest_substring([0, 1, 0, 0, 1, 1, 0, 1, 1, 0, 0, 1, 1], 3),"=?",length_of_longest_substring1([0, 1, 0, 0, 1, 1, 0, 1, 1, 0, 0, 1, 1], 3))
+
 
 
 main()

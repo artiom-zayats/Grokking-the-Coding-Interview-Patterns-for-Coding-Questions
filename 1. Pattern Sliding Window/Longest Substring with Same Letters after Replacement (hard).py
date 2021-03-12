@@ -21,8 +21,37 @@ Output: 3
 Explanation: Replace the 'b' or 'd' with 'c' to have the longest repeating substring "ccc".
 '''
 
+def length_of_longest_substring(str,k):
+
+  start = 0
+  result = float("-inf")
+  max_repear_letter_count = 0
+  seen = {}
+
+  for end in range(len(str)):
+    right_char = str[end]
+    if right_char not in seen:
+      seen[right_char]=0
+    seen[right_char]+=1
+    max_repear_letter_count = max(max_repear_letter_count,seen[right_char])
+
+    #we have to many substitutes
+    if (end-start+1-max_repear_letter_count) > k:
+      left_ch = str[start]
+      seen[left_ch]-=1
+      if seen[left_ch]==0:
+        del seen[left_ch]
+      start+=1
+
+    result = max(result,end-start+1)
+
+
+  if result == float("-inf"):
+     return 0
+  return result
+
 #mycode
-def length_of_longest_substring(str, k):
+def length_of_longest_substring_1(str, k):
   # TODO: Write your code here
   win_start, max_len, cnt = 0, 0, 0
   dict_str={}
@@ -44,7 +73,7 @@ def length_of_longest_substring(str, k):
 
 
 #answer
-def length_of_longest_substring(str, k):
+def length_of_longest_substring_2(str, k):
   window_start, max_length, max_repeat_letter_count = 0, 0, 0
   frequency_map = {}
 
@@ -75,6 +104,11 @@ def main():
   print(length_of_longest_substring("aabccbb", 2))
   print(length_of_longest_substring("abbcb", 1))
   print(length_of_longest_substring("abccde", 1))
+
+  print("Correct")
+  print(length_of_longest_substring_2("aabccbb", 2))
+  print(length_of_longest_substring_2("abbcb", 1))
+  print(length_of_longest_substring_2("abccde", 1))
 
 
 main()

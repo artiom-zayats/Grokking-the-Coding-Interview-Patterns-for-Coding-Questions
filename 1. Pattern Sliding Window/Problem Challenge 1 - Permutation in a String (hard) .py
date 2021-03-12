@@ -39,10 +39,42 @@ Output: true
 Explanation: The string contains "acb" which is a permutation of the given pattern.
 '''
 
+
+def find_permutation(str,pattern):
+  patter_dict = {}
+  for l in pattern:
+    if l not in patter_dict:
+      patter_dict[l]=0
+    patter_dict[l]+=1
+
+  seen = {}
+  start = 0
+  for end in range(len(str)):
+    right_char = str[end]
+    if right_char not in patter_dict:
+      start = end + 1
+      seen = {}
+      continue
+    if right_char not in seen:
+      seen[right_char]=0
+    seen[right_char]+=1
+
+    if seen == patter_dict:
+      break
+
+    while seen[right_char] > patter_dict[right_char]:
+      left_char = str[start]
+      seen[left_char]-=1
+      if seen[left_char] == 0:
+        del seen[left_char]
+      start+=1
+    
+  if patter_dict == seen:
+    return True
+  return False
+
 #mycode
-
-
-def find_permutation(str, pattern):
+def find_permutation1(str, pattern):
   # TODO: Write your code here
   p_dict={}
   s_dict={}
@@ -74,10 +106,8 @@ def find_permutation(str, pattern):
       return True
   return False
 
-
-
 #answer
-def find_permutation(str, pattern):
+def find_permutation2(str, pattern):
   window_start, matched = 0, 0
   char_frequency = {}
 
@@ -112,18 +142,26 @@ def find_permutation(str, pattern):
 
 
 def main():
+  print("Mine")
   print('Permutation exist: ' + str(find_permutation("oidbcaf", "abc")))
   print('Permutation exist: ' + str(find_permutation("odicf", "dc")))
   print('Permutation exist: ' + str(find_permutation("bcdxabcdy", "bcdyabcdx")))
   print('Permutation exist: ' + str(find_permutation("aaacb", "abc")))
 
+  print("Correct")
+  print('Permutation exist: ' + str(find_permutation2("oidbcaf", "abc")))
+  print('Permutation exist: ' + str(find_permutation2("odicf", "dc")))
+  print('Permutation exist: ' + str(find_permutation2("bcdxabcdy", "bcdyabcdx")))
+  print('Permutation exist: ' + str(find_permutation2("aaacb", "abc")))
+
+
 
 main()
 
 
-Time Complexity #
-The time complexity of the above algorithm will be O(N + M) where ‘N’ and ‘M’ are the number of characters in the input string and the pattern respectively.
+# Time Complexity #
+# The time complexity of the above algorithm will be O(N + M) where ‘N’ and ‘M’ are the number of characters in the input string and the pattern respectively.
 
-Space Complexity #
-The space complexity of the algorithm is O(M) since in the worst case, 
-the whole pattern can have distinct characters which will go into the HashMap.
+# Space Complexity #
+# The space complexity of the algorithm is O(M) since in the worst case, 
+# the whole pattern can have distinct characters which will go into the HashMap.

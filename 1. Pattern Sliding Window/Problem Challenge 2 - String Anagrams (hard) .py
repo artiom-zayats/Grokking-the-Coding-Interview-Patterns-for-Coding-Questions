@@ -26,9 +26,11 @@ Input: String="abbcabc", Pattern="abc"
 Output: [2, 3, 4]
 Explanation: The three anagrams of the pattern in the given string are "bca", "cab", and "abc".
 '''
+def find_string_anagrams(str,pattern):
+  return -1
 
 #mycode
-def find_string_anagrams(str, pattern):
+def find_string_anagrams1(str, pattern):
   result_indexes = []
   # TODO: Write your code here
   p_dict={}
@@ -63,7 +65,7 @@ def find_string_anagrams(str, pattern):
 
 
 #answer
-def find_string_anagrams(str, pattern):
+def find_string_anagrams2(str, pattern):
   window_start, matched = 0, 0
   char_frequency = {}
 
@@ -99,8 +101,8 @@ def find_string_anagrams(str, pattern):
 
 
 def main():
-  print(find_string_anagrams("ppqp", "pq"))
-  print(find_string_anagrams("abbcabc", "abc"))
+  print(find_string_anagrams("ppqp", "pq"),"=?",find_string_anagrams2("ppqp", "pq"))
+  print(find_string_anagrams("abbcabc", "abc"),"=?",find_string_anagrams2("abbcabc", "abc"))
 
 
 main()

@@ -1,14 +1,14 @@
 # [Grokking-the-Coding-Interview-Patterns-for-Coding-Questions](https://www.educative.io/courses/grokking-the-coding-interview)
 
 ## 1. Pattern: Sliding Window
-- Maximum Sum Subarray of Size K (easy)
-- Smallest Subarray with a given sum (easy)
-- Longest Substring with K Distinct Characters (medium)
-- Fruits into Baskets (medium)
-- No-repeat Substring (hard) *
-- Longest Substring with Same Letters after Replacement (hard)
-- Longest Subarray with Ones after Replacement (hard) *
-- Problem Challenge 1 - Permutation in a String (hard) *
+- Maximum Sum Subarray of Size K (easy) - Done
+- Smallest Subarray with a given sum (easy) - Done
+- Longest Substring with K Distinct Characters (medium) - Done
+- Fruits into Baskets (medium) - Done 
+- No-repeat Substring (hard) * - Done*
+- Longest Substring with Same Letters after Replacement (hard) -Done*
+- Longest Subarray with Ones after Replacement (hard) * - Done
+- Problem Challenge 1 - Permutation in a String (hard) * - Done
 - Problem Challenge 2 - String Anagrams (hard)
 - Problem Challenge 3 - Smallest Window containing Substring (hard) *
 - Problem Challenge 4 - Words Concatenation (hard) 
