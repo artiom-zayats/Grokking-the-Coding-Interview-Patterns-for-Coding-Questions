@@ -26,8 +26,47 @@ Input: String="abbcabc", Pattern="abc"
 Output: [2, 3, 4]
 Explanation: The three anagrams of the pattern in the given string are "bca", "cab", and "abc".
 '''
+
 def find_string_anagrams(str,pattern):
-  return -1
+  print("input: ",str,"pat: ",pattern)
+  start = 0
+  seen = {}
+  result = []
+
+  pattern_dic = {}
+  for l in pattern:
+    if l not in pattern_dic:
+      pattern_dic[l] = 0
+    pattern_dic[l]+=1
+
+  
+  for end in range(len(str)):
+    end_ch = str[end]
+    if end_ch not in pattern_dic:
+      start = end+1
+      seen = {}
+      continue
+    if end_ch not in seen:
+      seen[end_ch]=0
+    seen[end_ch]+=1
+
+    if seen == pattern_dic:
+      result.append(start)
+      start_ch = str[start]
+      seen[start_ch]-=1
+      if seen[start_ch]==0:
+        del seen[start_ch]
+      start+=1
+      continue
+
+    while seen[end_ch] > pattern_dic[end_ch]:
+      start_ch = str[start]
+      seen[start_ch]-=1
+      if seen[start_ch]==0:
+        del seen[start_ch]
+      start+=1
+
+  return result
 
 #mycode
 def find_string_anagrams1(str, pattern):
@@ -103,7 +142,8 @@ def find_string_anagrams2(str, pattern):
 def main():
   print(find_string_anagrams("ppqp", "pq"),"=?",find_string_anagrams2("ppqp", "pq"))
   print(find_string_anagrams("abbcabc", "abc"),"=?",find_string_anagrams2("abbcabc", "abc"))
-
+  print(find_string_anagrams("cbaebabacd","abc"))
+  print(find_string_anagrams("acdcaeccde","c"))
 
 main()
 
