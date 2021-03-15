@@ -10,8 +10,8 @@
 - Longest Subarray with Ones after Replacement (hard) * - Done
 - Problem Challenge 1 - Permutation in a String (hard) * - Done
 - Problem Challenge 2 - String Anagrams (hard) - Done
-- Problem Challenge 3 - Smallest Window containing Substring (hard) * - Working
-- Problem Challenge 4 - Words Concatenation (hard) 
+- Problem Challenge 3 - Smallest Window containing Substring (hard) * - Done
+- Problem Challenge 4 - Words Concatenation (hard) - Working
 
 ## 2. Pattern: Two Pointers
 - Pair with Target Sum (easy)
