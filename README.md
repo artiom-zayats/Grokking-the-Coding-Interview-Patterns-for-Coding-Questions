@@ -14,11 +14,11 @@
 - Problem Challenge 4 - Words Concatenation (hard) - Done
 
 ## 2. Pattern: Two Pointers
-- Pair with Target Sum (easy)
-- Remove Duplicates (easy)
-- Squaring a Sorted Array (easy)
-- Triplet Sum to Zero (medium)
-- Triplet Sum Close to Target (medium)
+- Pair with Target Sum (easy) - done
+- Remove Duplicates (easy) - done
+- Squaring a Sorted Array (easy)  - done
+- Triplet Sum to Zero (medium) - done
+- Triplet Sum Close to Target (medium) -done
 - Triplets with Smaller Sum (medium)
 - Subarrays with Product Less than a Target (medium) *
 - Problem Challenge 1 - Quadruple Sum to Target (medium) *
