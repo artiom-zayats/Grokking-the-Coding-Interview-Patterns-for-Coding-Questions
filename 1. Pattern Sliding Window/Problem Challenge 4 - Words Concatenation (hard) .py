@@ -17,8 +17,43 @@ Output: [3]
 Explanation: The only substring containing both the words is "catfox".
 '''
 
+
+def find_word_concatenation(s,words):
+  word_length = len(words[0])
+  total_length = len(words) * word_length
+  result = []
+
+  word_counts = {}
+  for w in words:
+    if w not in word_counts:
+      word_counts[w] = 0
+    word_counts[w] += 1
+
+  def test(ss):
+    matched = 0
+    seen = {}
+    for i in range(0, len(ss), word_length):
+      test_word = ss[i:i + word_length]
+      if test_word in word_counts:
+        if test_word not in seen:
+          seen[test_word] = 0
+        seen[test_word] += 1
+      else:
+        return False
+
+    if seen == word_counts:
+      return True
+
+  for ix in range(len(s)):
+    if ix + total_length <= len(s):
+      # print(s[ix:ix+total_length])
+      if test(s[ix:ix + total_length]):
+        result.append(ix)
+
+  return result
+
 #mycode
-def find_word_concatenation(str, words):
+def find_word_concatenation1(str, words):
   result_indices = []
   word_count = len(words)
   word_len=len(words[0])
@@ -42,7 +77,7 @@ def find_word_concatenation(str, words):
 
 
 #answer
-def find_word_concatenation(str, words):
+def find_word_concatenation2(str, words):
   if len(words) == 0 or len(words[0]) == 0:
     return []
 
