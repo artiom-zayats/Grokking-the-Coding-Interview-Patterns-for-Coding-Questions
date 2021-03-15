@@ -23,10 +23,45 @@ Output: ""
 Explanation: No substring in the given string has all characters of the pattern.
 '''
 
+def find_substring(s,pattern):
+  pat_dic = {}
+  for letter in pattern:
+    if letter not in pat_dic:
+      pat_dic[letter] = 0
+    pat_dic[letter] += 1
+
+  start = 0
+  matched = 0
+  min_window = len(s) + 1
+  result = -1
+
+  for end in range(len(s)):
+    end_ch = s[end]
+
+    if end_ch in pat_dic:
+      pat_dic[end_ch] -= 1
+      if pat_dic[end_ch] == 0:
+        matched += 1
+
+    if matched == len(pat_dic):
+      # we found a window try to shrink
+      while matched == len(pat_dic):
+        if end - start + 1 < min_window:
+          result = s[start:end + 1]
+          min_window = end - start + 1
+        start_ch = s[start]
+        if start_ch in pat_dic:
+          pat_dic[start_ch] += 1
+          if pat_dic[start_ch] > 0:
+            matched -= 1
+        start += 1
+
+  return result
+
 
 #mycode
 import math
-def find_substring(str, pattern):
+def find_substring1(str, pattern):
   # TODO: Write your code here
   p_dict={}
   s_dict={}
@@ -67,7 +102,7 @@ def find_substring(str, pattern):
 
 
 #answer
-def find_substring(str, pattern):
+def find_substring2(str, pattern):
   window_start, matched, substr_start = 0, 0, 0
   min_length = len(str) + 1
   char_frequency = {}
@@ -101,7 +136,7 @@ def find_substring(str, pattern):
         char_frequency[left_char] += 1
 
   if min_length > len(str):
-    return ""
+    return -1
   return str[substr_start:substr_start + min_length]
 
 
@@ -109,6 +144,11 @@ def main():
   print(find_substring("aabdec", "abc"))
   print(find_substring("abdabca", "abc"))
   print(find_substring("adcad", "abc"))
+
+  print("Correct")
+  print(find_substring2("aabdec", "abc"))
+  print(find_substring2("abdabca", "abc"))
+  print(find_substring2("adcad", "abc"))
 
 main()
 
