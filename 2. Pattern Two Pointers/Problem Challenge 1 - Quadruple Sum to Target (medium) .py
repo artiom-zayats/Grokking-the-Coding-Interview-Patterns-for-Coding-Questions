@@ -17,8 +17,43 @@ Output: [-2, 0, 2, 2], [-1, 0, 1, 2]
 Explanation: Both the quadruplets add up to the target.
 '''
 
-#mycode
 def search_quadruplets(arr, target):
+  return list(k_sum(arr,target,4))
+
+
+def k_sum(arr,target,k):
+  arr = sorted(arr)
+  #print(f"input:{arr} target:{target} k:{k}")
+  result = set()
+  if k < 2:
+    raise("Error")
+  if k == 2:
+    l = 0
+    r = len(arr)-1
+    while l < r:
+      test = arr[l] + arr[r]
+      if test == target:
+        result.add((arr[l],arr[r]))
+        r-=1
+        l+=1
+        continue
+      if test < target:
+        l+=1
+      else:
+        r-=1
+    return result
+  for i in range(len(arr)):
+    temp = k_sum(arr[i+1:],target-arr[i],k-1)
+    for res in temp:
+      result.add((arr[i],)+res)
+
+  return result
+
+
+
+
+#mycode
+def search_quadruplets2(arr, target):
   quadruplets = []
   # TODO: Write your code here
 
@@ -59,7 +94,7 @@ def search_pair(arr, i, j, target, quadruplets):
 
 
 #answer
-def search_quadruplets(arr, target):
+def search_quadruplets3(arr, target):
   arr.sort()
   quadruplets = []
   for i in range(0, len(arr)-3):
@@ -97,6 +132,9 @@ def search_pairs(arr, target_sum, first, second, quadruplets):
 def main():
   print(search_quadruplets([4, 1, 2, -1, 1, -3], 1))
   print(search_quadruplets([2, 0, -1, 1, -2, 2], 2))
+
+  print(search_quadruplets2([4, 1, 2, -1, 1, -3], 1))
+  print(search_quadruplets2([2, 0, -1, 1, -2, 2], 2))
 
 
 main()
