@@ -16,7 +16,7 @@ Explanation: There are seven contiguous subarrays whose product is less than the
 '''
 
 #mycode
-def find_subarrays(arr, target):
+def find_subarrays2(arr, target):
   result = []
   product = 1
   win_start=0

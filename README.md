@@ -20,8 +20,8 @@
 - Triplet Sum to Zero (medium) - done
 - Triplet Sum Close to Target (medium) -done
 - Triplets with Smaller Sum (medium) - done
-- Subarrays with Product Less than a Target (medium) *
-- Problem Challenge 1 - Quadruple Sum to Target (medium) *
+- Subarrays with Product Less than a Target (medium) * - done
+- Problem Challenge 1 - Quadruple Sum to Target (medium) * - working
 - Problem Challenge 2 - Comparing Strings containing Backspaces (medium)
 - Problem Challenge 3 - Minimum Window Sort (medium) *
 
