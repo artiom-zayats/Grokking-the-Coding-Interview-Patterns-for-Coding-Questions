@@ -27,11 +27,11 @@
 
 
 ## 3. Pattern: Fast & Slow pointers
-- LinkedList Cycle (easy)
-- Middle of the LinkedList (easy)
-- Start of LinkedList Cycle (medium) *
-- Happy Number (medium) * 
-- Problem Challenge 1 - Palindrome LinkedList (medium) *
+- LinkedList Cycle (easy) - done
+- Middle of the LinkedList (easy) - done
+- Start of LinkedList Cycle (medium) * - done
+- Happy Number (medium) *  - done
+- Problem Challenge 1 - Palindrome LinkedList (medium) * - working
 - Problem Challenge 2 - Rearrange a LinkedList (medium)
 - Problem Challenge 3 - Cycle in a Circular Array (hard) *
 
