@@ -31,8 +31,8 @@
 - Middle of the LinkedList (easy) - done
 - Start of LinkedList Cycle (medium) * - done
 - Happy Number (medium) *  - done
-- Problem Challenge 1 - Palindrome LinkedList (medium) * - working
-- Problem Challenge 2 - Rearrange a LinkedList (medium)
+- Problem Challenge 1 - Palindrome LinkedList (medium) * - done
+- Problem Challenge 2 - Rearrange a LinkedList (medium) - working
 - Problem Challenge 3 - Cycle in a Circular Array (hard) *
 
 ## 4. Pattern: Merge Intervals
