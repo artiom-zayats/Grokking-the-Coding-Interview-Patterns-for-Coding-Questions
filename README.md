@@ -32,17 +32,17 @@
 - Start of LinkedList Cycle (medium) * - done
 - Happy Number (medium) *  - done
 - Problem Challenge 1 - Palindrome LinkedList (medium) * - done
-- Problem Challenge 2 - Rearrange a LinkedList (medium) - working
-- Problem Challenge 3 - Cycle in a Circular Array (hard) *
+- Problem Challenge 2 - Rearrange a LinkedList (medium) - done
+- Problem Challenge 3 - Cycle in a Circular Array (hard) * - done - but note sure about length
 
 ## 4. Pattern: Merge Intervals
-- Merge Intervals (medium)
-- Insert Interval (medium) *
-- Intervals Intersection (medium)
-- Conflicting Appointments (medium)
-- Problem Challenge 1 - Minimum Meeting Rooms (hard) *
-- Problem Challenge 2 - Maximum CPU Load (hard)
-- Problem Challenge 3 - Employee Free Time (hard) *
+- Merge Intervals (medium)  - done
+- Insert Interval (medium) * - done
+- Intervals Intersection (medium) - done
+- Conflicting Appointments (medium) - working
+- Problem Challenge 1 - Minimum Meeting Rooms (hard) * [not on leetcode]
+- Problem Challenge 2 - Maximum CPU Load (hard) - on leetcode
+- Problem Challenge 3 - Employee Free Time (hard) * [not on leetcode]
 
 ## 5.Pattern: Cyclic Sort
 - Cyclic Sort (easy)
