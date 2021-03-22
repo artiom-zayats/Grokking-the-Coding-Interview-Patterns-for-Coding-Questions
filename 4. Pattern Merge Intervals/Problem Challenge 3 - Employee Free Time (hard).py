@@ -23,12 +23,69 @@ Example 3:
 
 Input: Employee Working Hours=[[[1,3]], [[2,4]], [[3,5], [7,9]]]
 Output: [5,7]
-Explanation: All employess are free between [5,7].
+Explanation: All employees are free between [5,7].
 '''
-
 
 #mycode
 from __future__ import print_function
+
+class Interval:
+    def __init__(self, start, end):
+        self.start = start
+        self.end = end
+
+    def print_interval(self):
+        print("[" + str(self.start) + ", " + str(self.end) + "]", end='')
+
+
+def find_employee_free_time(schedule):
+    # TODO: Write your code here
+    # K employees find common place where not working.
+    num_employees = len(schedule)
+    intervals = []
+    for employee in schedule:
+        for interval in employee:
+            intervals.append(interval)
+
+    intervals = sorted(intervals,key = lambda x:x.start)
+
+    result = []
+
+    for i in range(len(intervals)-1):
+        if intervals[i+1].start > intervals[i].end:
+            new_interval = Interval(intervals[i].end,intervals[i+1].start)
+            result.append(new_interval)
+
+    return  result
+
+def main():
+
+    input = [[Interval(1, 3), Interval(5, 6)], [
+        Interval(2, 3), Interval(6, 8)]]
+    print("Free intervals: ", end='')
+    for interval in find_employee_free_time(input):
+        interval.print_interval()
+    print()
+
+    input = [[Interval(1, 3), Interval(9, 12)], [
+        Interval(2, 4)], [Interval(6, 8)]]
+    print("Free intervals: ", end='')
+    for interval in find_employee_free_time(input):
+        interval.print_interval()
+    print()
+
+    input = [[Interval(1, 3)], [
+        Interval(2, 4)], [Interval(3, 5), Interval(7, 9)]]
+    print("Free intervals: ", end='')
+    for interval in find_employee_free_time(input):
+        interval.print_interval()
+    print()
+
+
+main()
+
+
+#mycode
 
 class Interval:
     def __init__(self, start, end):
@@ -84,7 +141,6 @@ main()
 
 
 #answer
-from __future__ import print_function
 from heapq import *
 
 

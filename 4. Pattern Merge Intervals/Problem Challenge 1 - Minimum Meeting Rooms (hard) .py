@@ -31,22 +31,39 @@ Explanation: We will need one room for [2,3] and [3,5], and another room for [2,
  
 Here is a visual representation of Example 4:
 '''
-
-
-
 #mycode
 from heapq import *
-
 
 class Meeting:
   def __init__(self, start, end):
     self.start = start
     self.end = end
-  
+  #this is used for heapq comparision
   def __lt__(self, other):
     return self.end < other.end
 
 def min_meeting_rooms(meetings):
+  """
+  Sort the meeting by start
+  create a heap of meeting rooms by end
+  when new meeting new interval if last meeting have ended pop it
+  start a new room in heap
+  """
+  meeting_rooms = []
+  min_meetings = float("inf")
+  meetings = sorted(meetings, key= lambda x: x.start)
+  heappush(meeting_rooms,meetings[0])
+  for new_meeting in meetings[1:]:
+    if meeting_rooms[0].end < new_meeting.start:
+      heappop(meeting_rooms)
+    heappush(meeting_rooms,new_meeting)
+    min_meetings = min(min_meetings,len(meeting_rooms))
+
+
+  return min_meetings
+
+#ans
+def min_meeting_rooms1(meetings):
   # TODO: Write your code here
   meetings.sort(key=lambda x: x.start)
   conflict=[]
@@ -57,40 +74,7 @@ def min_meeting_rooms(meetings):
     heappush(conflict, meeting)
     min_rooms=max(len(conflict),min_rooms)
   return min_rooms
-
-
-def main():
-  print("Minimum meeting rooms required: " + str(min_meeting_rooms(
-    [Meeting(4, 5), Meeting(2, 3), Meeting(2, 4), Meeting(3, 5)])))
-  print("Minimum meeting rooms required: " +
-        str(min_meeting_rooms([Meeting(1, 4), Meeting(2, 5), Meeting(7, 9)])))
-  print("Minimum meeting rooms required: " +
-        str(min_meeting_rooms([Meeting(6, 7), Meeting(2, 4), Meeting(8, 12)])))
-  print("Minimum meeting rooms required: " +
-        str(min_meeting_rooms([Meeting(1, 4), Meeting(2, 3), Meeting(3, 6)])))
-  print("Minimum meeting rooms required: " + str(min_meeting_rooms(
-    [Meeting(4, 5), Meeting(2, 3), Meeting(2, 4), Meeting(3, 5)])))
-
-
-main()
-
-
-
-#answer
-from heapq import *
-
-
-class Meeting:
-  def __init__(self, start, end):
-    self.start = start
-    self.end = end
-
-  def __lt__(self, other):
-    # min heap based on meeting.end
-    return self.end < other.end
-
-
-def min_meeting_rooms(meetings):
+def min_meeting_rooms2(meetings):
   # sort the meetings by start time
   meetings.sort(key=lambda x: x.start)
 
@@ -117,6 +101,19 @@ def main():
   print("Minimum meeting rooms required: " +
         str(min_meeting_rooms([Meeting(1, 4), Meeting(2, 3), Meeting(3, 6)])))
   print("Minimum meeting rooms required: " + str(min_meeting_rooms(
+    [Meeting(4, 5), Meeting(2, 3), Meeting(2, 4), Meeting(3, 5)])))
+
+  print("Correct")
+
+  print("Minimum meeting rooms required: " + str(min_meeting_rooms2(
+    [Meeting(4, 5), Meeting(2, 3), Meeting(2, 4), Meeting(3, 5)])))
+  print("Minimum meeting rooms required: " +
+        str(min_meeting_rooms2([Meeting(1, 4), Meeting(2, 5), Meeting(7, 9)])))
+  print("Minimum meeting rooms required: " +
+        str(min_meeting_rooms2([Meeting(6, 7), Meeting(2, 4), Meeting(8, 12)])))
+  print("Minimum meeting rooms required: " +
+        str(min_meeting_rooms2([Meeting(1, 4), Meeting(2, 3), Meeting(3, 6)])))
+  print("Minimum meeting rooms required: " + str(min_meeting_rooms2(
     [Meeting(4, 5), Meeting(2, 3), Meeting(2, 4), Meeting(3, 5)])))
 
 

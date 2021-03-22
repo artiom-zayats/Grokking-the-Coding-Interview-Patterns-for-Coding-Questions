@@ -25,6 +25,52 @@ Jobs: [[1,4,2], [2,4,1], [3,6,5]]
 Output: 8
 Explanation: Maximum CPU load will be 8 as all jobs overlap during the time interval [3,4]. 
 '''
+# mycode
+from heapq import *
+
+
+class job:
+  def __init__(self, start, end, cpu_load):
+    self.start = start
+    self.end = end
+    self.cpu_load = cpu_load
+
+  def __lt__(self, other):
+    self.end < other.end
+
+
+def find_max_cpu_load(jobs):
+  # TODO: Write your code here
+
+  max_load = float("-inf")
+  jobs = sorted(jobs,key=lambda x:x.start)
+  cpu_loads = []
+  temp_load = 0
+
+
+  for job in jobs:
+    while cpu_loads and cpu_loads[0].end < job.start:
+      #remove load
+      val = heappop(cpu_loads)
+      temp_load -= val.cpu_load
+    heappush(cpu_loads,job)
+    temp_load+=job.cpu_load
+    max_load = max(max_load,temp_load)
+
+
+
+  return max_load
+
+
+def main():
+  print("Maximum CPU load at any time: " + str(find_max_cpu_load([job(1, 4, 3), job(2, 5, 4), job(7, 9, 6)])))
+  print("Maximum CPU load at any time: " + str(find_max_cpu_load([job(6, 7, 10), job(2, 4, 11), job(8, 12, 15)])))
+  print("Maximum CPU load at any time: " + str(find_max_cpu_load([job(1, 4, 2), job(2, 4, 1), job(3, 6, 5)])))
+
+
+main()
+
+
 
 #mycode
 from heapq import *

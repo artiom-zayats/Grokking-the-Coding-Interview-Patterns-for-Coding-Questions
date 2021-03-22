@@ -39,10 +39,10 @@
 - Merge Intervals (medium)  - done
 - Insert Interval (medium) * - done
 - Intervals Intersection (medium) - done
-- Conflicting Appointments (medium) - working
-- Problem Challenge 1 - Minimum Meeting Rooms (hard) * [not on leetcode]
-- Problem Challenge 2 - Maximum CPU Load (hard) - on leetcode
-- Problem Challenge 3 - Employee Free Time (hard) * [not on leetcode]
+- Conflicting Appointments (medium) - done
+- Problem Challenge 1 - Minimum Meeting Rooms (hard) * [not on leetcode] - done
+- Problem Challenge 2 - Maximum CPU Load (hard) - done [different on leetcode] - done
+- Problem Challenge 3 - Employee Free Time (hard) * [not on leetcode] - done
 
 ## 5.Pattern: Cyclic Sort
 - Cyclic Sort (easy)
