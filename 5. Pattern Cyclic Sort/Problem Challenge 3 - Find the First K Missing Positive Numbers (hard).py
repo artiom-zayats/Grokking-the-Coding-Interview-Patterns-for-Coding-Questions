@@ -25,7 +25,7 @@ Explanation: The smallest missing positive numbers are 1 and 2.
 '''
 
 #mycode
-def find_first_k_missing_positive(nums, k):
+def find_first_k_missing_positive1(nums, k):
   missingNumbers = []
   # TODO: Write your code here
   i=0
@@ -58,7 +58,7 @@ def find_first_k_missing_positive(nums, k):
 
 #answer
 
-def find_first_k_missing_positive(nums, k):
+def find_first_k_missing_positive2(nums, k):
   n = len(nums)
   i = 0
   while i < len(nums):
