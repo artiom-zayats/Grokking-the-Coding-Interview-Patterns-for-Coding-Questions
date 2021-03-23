@@ -50,9 +50,9 @@
 - Find all Missing Numbers (easy) - done
 - Find the Duplicate Number (easy) - done
 - Find all Duplicate Numbers (easy) - done (intersting two way aproach + hash + cycle)
-- Problem Challenge 1 - Find the Corrupt Pair (easy)  - working
-- Problem Challenge 2 - Find the Smallest Missing Positive Number (medium)
-- Problem Challenge 3 - Find the First K Missing Positive Numbers (hard) *
+- Problem Challenge 1 - Find the Corrupt Pair (easy)  - done
+- Problem Challenge 2 - Find the Smallest Missing Positive Number (medium) - done
+- Problem Challenge 3 - Find the First K Missing Positive Numbers (hard) * - working
 
 ## 6. Pattern: In-place Reversal of a LinkedList
 - Reverse a LinkedList (easy) 
