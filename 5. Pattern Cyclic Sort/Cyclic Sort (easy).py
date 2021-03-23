@@ -24,6 +24,19 @@ Output: [1, 2, 3, 4, 5, 6]
 
 #mycode
 def cyclic_sort(nums):
+  i = 0
+  while i < len(nums):
+    j = nums[i]-1
+    if i != j:
+      while i != j:
+        nums[i],nums[j] = nums[j],nums[i]
+        i = j
+    i+=1
+  return nums
+
+
+#mycode
+def cyclic_sort1(nums):
   # TODO: Write your code here
   i=0
   while i < len(nums):
@@ -36,7 +49,7 @@ def cyclic_sort(nums):
 
 
 #answer
-def cyclic_sort(nums):
+def cyclic_sort2(nums):
   i = 0
   while i < len(nums):
     j = nums[i] - 1
@@ -51,6 +64,11 @@ def main():
   print(cyclic_sort([3, 1, 5, 4, 2]))
   print(cyclic_sort([2, 6, 4, 3, 1, 5]))
   print(cyclic_sort([1, 5, 6, 4, 3, 2]))
+
+  print("correct")
+  print(cyclic_sort2([3, 1, 5, 4, 2]))
+  print(cyclic_sort2([2, 6, 4, 3, 1, 5]))
+  print(cyclic_sort2([1, 5, 6, 4, 3, 2]))
 
 
 main()
