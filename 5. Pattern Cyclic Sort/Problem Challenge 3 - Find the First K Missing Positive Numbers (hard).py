@@ -24,6 +24,35 @@ Output: [1, 2]
 Explanation: The smallest missing positive numbers are 1 and 2.
 '''
 
+
+# mycode
+def find_first_k_missing_positive(nums, k):
+  missingNumbers = []
+  i = 0
+  while i < len(nums):
+    j = nums[i]-1
+    if j >= 0 and j<len(nums) and nums[i] != nums[j]:
+      nums[i],nums[j] = nums[j],nums[i]
+    else:
+      i+=1
+
+  i = 0
+  count = 0
+  correct = float("-inf")
+  while i < len(nums) and count < k:
+    if nums[i]-1 != i:
+      missingNumbers.append(i+1)
+      count+=1
+    correct = max(correct,nums[i])
+    i+=1
+  #print("nums",nums)
+  #print("correct",correct)
+  for i in range(count,k):
+    missingNumbers.append(correct+1)
+    correct+=1
+
+  return missingNumbers
+
 #mycode
 def find_first_k_missing_positive1(nums, k):
   missingNumbers = []
@@ -92,6 +121,10 @@ def main():
   print(find_first_k_missing_positive([3, -1, 4, 5, 5], 3))
   print(find_first_k_missing_positive([2, 3, 4], 3))
   print(find_first_k_missing_positive([-2, -3, 4], 2))
+  print("Correct")
+  print(find_first_k_missing_positive2([3, -1, 4, 5, 5], 3))
+  print(find_first_k_missing_positive2([2, 3, 4], 3))
+  print(find_first_k_missing_positive2([-2, -3, 4], 2))
 
 
 main()
