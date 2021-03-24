@@ -58,7 +58,7 @@
 - Reverse a LinkedList (easy) - done
 - Reverse a Sub-list (medium) - done
 - Reverse every K-element Sub-list (medium) * - done (come back)
-- Problem Challenge 1 - Reverse alternating K-element Sub-list (medium)
+- Problem Challenge 1 - Reverse alternating K-element Sub-list (medium) - working
 - Problem Challenge 2 - Rotate a LinkedList (medium)
 
 ## 7. Pattern: Tree Breadth First Search
