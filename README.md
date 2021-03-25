@@ -1,17 +1,17 @@
 # [Grokking-the-Coding-Interview-Patterns-for-Coding-Questions](https://www.educative.io/courses/grokking-the-coding-interview)
 
 ## 1. Pattern: Sliding Window
-- Maximum Sum Subarray of Size K (easy) - Done
-- Smallest Subarray with a given sum (easy) - Done
-- Longest Substring with K Distinct Characters (medium) - Done
-- Fruits into Baskets (medium) - Done 
-- No-repeat Substring (hard) * - Done*
-- Longest Substring with Same Letters after Replacement (hard) -Done*
-- Longest Subarray with Ones after Replacement (hard) * - Done
-- Problem Challenge 1 - Permutation in a String (hard) * - Done
-- Problem Challenge 2 - String Anagrams (hard) - Done
-- Problem Challenge 3 - Smallest Window containing Substring (hard) * - Done
-- Problem Challenge 4 - Words Concatenation (hard) - Done
+- Maximum Sum Subarray of Size K (easy) - done
+- Smallest Subarray with a given sum (easy) - done
+- Longest Substring with K Distinct Characters (medium) - done
+- Fruits into Baskets (medium) - done 
+- No-repeat Substring (hard) * - done *
+- Longest Substring with Same Letters after Replacement (hard) - done * 
+- Longest Subarray with Ones after Replacement (hard) * - done
+- Problem Challenge 1 - Permutation in a String (hard) * - done
+- Problem Challenge 2 - String Anagrams (hard) - done
+- Problem Challenge 3 - Smallest Window containing Substring (hard) * - done
+- Problem Challenge 4 - Words Concatenation (hard) - done
 
 ## 2. Pattern: Two Pointers
 - Pair with Target Sum (easy) - done
@@ -22,7 +22,7 @@
 - Triplets with Smaller Sum (medium) - done
 - Subarrays with Product Less than a Target (medium) * - done
 - Problem Challenge 1 - Quadruple Sum to Target (medium) * - done
-- Problem Challenge 2 - Comparing Strings containing Backspaces (medium) - working
+- Problem Challenge 2 - Comparing Strings containing Backspaces (medium) - done
 - Problem Challenge 3 - Minimum Window Sort (medium) *
 
 
