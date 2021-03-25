@@ -65,16 +65,16 @@
 - Binary Tree Level Order Traversal (easy) - done (deque is faster)
 - Reverse Level Order Traversal (easy) * - done
 - Zigzag Traversal (medium) - done
-- Level Averages in a Binary Tree (easy)  - working
-- Minimum Depth of a Binary Tree (easy) 
-- Level Order Successor (easy)
-- Connect Level Order Siblings (medium)
-- Problem Challenge 1 - Connect All Level Order Siblings (medium)
-- Problem Challenge 2 - Right View of a Binary Tree (easy) 
+- Level Averages in a Binary Tree (easy)  - done
+- Minimum Depth of a Binary Tree (easy)  - done
+- Level Order Successor (easy) - not on [leetcode] - done
+- Connect Level Order Siblings (medium) - done
+- Problem Challenge 1 - Connect All Level Order Siblings (medium) - done
+- Problem Challenge 2 - Right View of a Binary Tree (easy)  - done
 
 ## 8. Pattern: Tree Depth First Search
-- Binary Tree Path Sum (easy)
-- All Paths for a Sum (medium) *
+- Binary Tree Path Sum (easy) - done
+- All Paths for a Sum (medium) * - done
 - Sum of Path Numbers (medium)
 - Path With Given Sequence (medium) *
 - Count Paths for a Sum (medium)

@@ -4,6 +4,60 @@ Given a binary tree and a node, find the level order successor of the given node
 The level order successor is the node that appears right after the given node in the level order traversal.
 '''
 
+# mycode
+from collections import deque
+
+
+class TreeNode:
+  def __init__(self, val):
+    self.val = val
+    self.left, self.right = None, None
+
+
+def find_successor(root, key):
+  # TODO: Write your code here
+  if not root or not key:
+    return None
+
+  que = deque()
+  que.append(root)
+  found = False
+
+  while que:
+    for _ in range(len(que)):
+      el = que.popleft()
+
+      if found:
+        return el
+
+      if el.val == key:
+        found = True
+      if el.left:
+        que.append(el.left)
+      if el.right:
+        que.append(el.right)
+    found = False
+
+  return None
+
+
+def main():
+  root = TreeNode(12)
+  root.left = TreeNode(7)
+  root.right = TreeNode(1)
+  root.left.left = TreeNode(9)
+  root.right.left = TreeNode(10)
+  root.right.right = TreeNode(5)
+  result = find_successor(root, 12)
+  if result:
+    print(result.val)
+  result = find_successor(root, 9)
+  if result:
+    print(result.val)
+
+
+main()
+
 
 #mycode
 from collections import deque
@@ -13,6 +67,7 @@ class TreeNode:
   def __init__(self, val):
     self.val = val
     self.left, self.right = None, None
+
 
 
 def find_successor(root, key):
@@ -51,7 +106,7 @@ def main():
   result = find_successor(root, 12)
   if result:
     print(result.val)
-  result = find_successor(root, 10)
+  result = find_successor(root, 9)
   if result:
     print(result.val)
 

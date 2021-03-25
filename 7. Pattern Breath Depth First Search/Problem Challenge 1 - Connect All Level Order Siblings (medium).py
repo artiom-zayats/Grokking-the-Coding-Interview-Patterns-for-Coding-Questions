@@ -26,6 +26,27 @@ class TreeNode:
 
 
 def connect_all_siblings(root):
+  if not root:
+    return root
+
+  que = deque()
+  que.append(root)
+  prev = None
+  while que:
+    for _ in range(len(que)):
+      el = que.popleft()
+      if prev:
+        prev.next = el
+      if el.left:
+        que.append(el.left)
+      if el.right:
+        que.append(el.right)
+      prev = el
+
+  return root
+
+
+def connect_all_siblings2(root):
   # TODO: Write your code here
   if not root:
     return None
@@ -50,6 +71,7 @@ def connect_all_siblings(root):
   
 
 def main():
+  print("test")
   root = TreeNode(12)
   root.left = TreeNode(7)
   root.right = TreeNode(1)
@@ -66,7 +88,7 @@ main()
 
 
 #answer
-from __future__ import print_function
+# from __future__ import print_function
 from collections import deque
 
 
@@ -105,6 +127,7 @@ def connect_all_siblings(root):
 
 
 def main():
+  print("\ntest2")
   root = TreeNode(12)
   root.left = TreeNode(7)
   root.right = TreeNode(1)
