@@ -37,8 +37,30 @@ def reverse_alternate_k_elements(head, k):
             k-=1
         return prev
 
+    root = Node(0,head)
+    prev = root
+    cur = head
+    ix = 0
+    prev_prev = None
 
-    return reverse_list(head,3)
+    while cur:
+        tail = cur
+        count = 0
+        while cur and count < k:
+            prev_prev = cur
+            cur = cur.next
+            count+=1
+        if ix%2 == 0:
+            #reverse
+            prev.next = reverse_list(tail,k)
+            prev = tail
+        else:
+            #dont reverse
+            prev.next = tail
+            prev = prev_prev
+        ix+=1
+    
+    return root.next
 
 
 def main():
@@ -50,11 +72,13 @@ def main():
     head.next.next.next.next.next = Node(6)
     head.next.next.next.next.next.next = Node(7)
     head.next.next.next.next.next.next.next = Node(8)
+    head.next.next.next.next.next.next.next.next = Node(9)
+    head.next.next.next.next.next.next.next.next.next = Node(10)
 
     print("mine")
     print("Nodes of original LinkedList are: ", end='')
     head.print_list()
-    result = reverse_alternate_k_elements(head, 2)
+    result = reverse_alternate_k_elements(head, 4)
     print("Nodes of reversed LinkedList are: ", end='')
     result.print_list()
     print("end")
