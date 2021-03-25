@@ -58,11 +58,11 @@
 - Reverse a LinkedList (easy) - done
 - Reverse a Sub-list (medium) - done
 - Reverse every K-element Sub-list (medium) * - done (come back)
-- Problem Challenge 1 - Reverse alternating K-element Sub-list (medium) - working
-- Problem Challenge 2 - Rotate a LinkedList (medium)
+- Problem Challenge 1 - Reverse alternating K-element Sub-list (medium) - done
+- Problem Challenge 2 - Rotate a LinkedList (medium) - done
 
 ## 7. Pattern: Tree Breadth First Search
-- Binary Tree Level Order Traversal (easy)
+- Binary Tree Level Order Traversal (easy) - done (deque is faster)
 - Reverse Level Order Traversal (easy) * 
 - Zigzag Traversal (medium)
 - Level Averages in a Binary Tree (easy)
