@@ -64,8 +64,8 @@
 ## 7. Pattern: Tree Breadth First Search
 - Binary Tree Level Order Traversal (easy) - done (deque is faster)
 - Reverse Level Order Traversal (easy) * - done
-- Zigzag Traversal (medium) - working
-- Level Averages in a Binary Tree (easy)
+- Zigzag Traversal (medium) - done
+- Level Averages in a Binary Tree (easy)  - working
 - Minimum Depth of a Binary Tree (easy) 
 - Level Order Successor (easy)
 - Connect Level Order Siblings (medium)
