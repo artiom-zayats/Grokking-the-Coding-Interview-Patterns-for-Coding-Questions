@@ -11,11 +11,50 @@ class TreeNode:
     self.right = right
 
 
+def find_path_it(root, sequence):
+  # TODO: Write your code here
+  stack = []
+  if not root or not sequence:
+    return False
+  stack.append((root,[]))
+  while stack:
+    el,seq = stack.pop()
+    if not el.left and not el.right:
+      test = seq+[el.val]
+      if test == sequence:
+        return True
+    if el.left:
+      stack.append((el.left,seq+[el.val]))
+    if el.right:
+      stack.append((el.right,seq+[el.val]))
+  return False
+
+
 def find_path(root, sequence):
+  print(root.val)
+  if not root:
+    return False
+
+  if not root.left and not root.right:
+    if len(sequence) == 1 and sequence[0] == root.val:
+      return True
+  left,right = False,False
+  if root.left and root.val == sequence[0]:
+    left = find_path(root.left,sequence[1:])
+
+  if root.right and root.val == sequence[0]:
+    right = find_path(root.right,sequence[1:])
+
+  return left or right
+
+
+
+
+
+def find_path2(root, sequence):
   # TODO: Write your code here
   
   return find_current_path(root, sequence)
-
 def find_current_path(currentNode, sequence):
   
   if not currentNode:
@@ -30,8 +69,6 @@ def find_current_path(currentNode, sequence):
       del sequence[0]
       return find_current_path(currentNode.left, sequence) or find_current_path(currentNode.right, sequence)
   
-
-
 
 def main():
 

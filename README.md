@@ -23,7 +23,7 @@
 - Subarrays with Product Less than a Target (medium) * - done
 - Problem Challenge 1 - Quadruple Sum to Target (medium) * - done
 - Problem Challenge 2 - Comparing Strings containing Backspaces (medium) - done
-- Problem Challenge 3 - Minimum Window Sort (medium) *
+- Problem Challenge 3 - Minimum Window Sort (medium) * - done
 
 
 ## 3. Pattern: Fast & Slow pointers
@@ -75,9 +75,9 @@
 ## 8. Pattern: Tree Depth First Search
 - Binary Tree Path Sum (easy) - done
 - All Paths for a Sum (medium) * - done
-- Sum of Path Numbers (medium)
-- Path With Given Sequence (medium) *
-- Count Paths for a Sum (medium)
+- Sum of Path Numbers (medium) - done
+- Path With Given Sequence (medium) * - done
+- Count Paths for a Sum (medium)  - working
 - Problem Challenge 1 - Tree Diameter (medium) *
 - Problem Challenge 2 - Path with Maximum Sum (hard) *
 
