@@ -77,7 +77,7 @@
 - All Paths for a Sum (medium) * - done
 - Sum of Path Numbers (medium) - done
 - Path With Given Sequence (medium) * - done
-- Count Paths for a Sum (medium)  - working
+- Count Paths for a Sum (medium)  - done - not sure*
 - Problem Challenge 1 - Tree Diameter (medium) *
 - Problem Challenge 2 - Path with Maximum Sum (hard) *
 
