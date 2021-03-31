@@ -83,7 +83,7 @@
 
 ## 9. Pattern: Two Heaps
 - Find the Median of a Number Stream (medium) - done
-- Sliding Window Median (hard) *
+- Sliding Window Median (hard) * - done
 - Maximize Capital (hard) * - done (greedy)
 - Problem Challenge 1 - Next Interval (hard) - working
 
