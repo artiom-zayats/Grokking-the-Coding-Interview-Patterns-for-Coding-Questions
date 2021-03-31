@@ -82,10 +82,10 @@
 - Problem Challenge 2 - Path with Maximum Sum (hard) *
 
 ## 9. Pattern: Two Heaps
-- Find the Median of a Number Stream (medium) 
+- Find the Median of a Number Stream (medium) - done
 - Sliding Window Median (hard) *
-- Maximize Capital (hard) * 
-- Problem Challenge 1 - Next Interval (hard) 
+- Maximize Capital (hard) * - done (greedy)
+- Problem Challenge 1 - Next Interval (hard) - working
 
 ## 10. Pattern: Subsets
 - Subsets (easy)
