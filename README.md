@@ -88,11 +88,11 @@
 - Problem Challenge 1 - Next Interval (hard) - done
 
 ## 10. Pattern: Subsets
-- Subsets (easy) - working
-- Subsets With Duplicates (easy) *
-- Permutations (medium) *
-- String Permutations by changing case (medium)
-- Balanced Parentheses (hard) *
+- Subsets (easy) - done
+- Subsets With Duplicates (easy) * - done
+- Permutations (medium) * - done
+- String Permutations by changing case (medium) - done
+- Balanced Parentheses (hard) * - working
 - Unique Generalized Abbreviations (hard) * 
 - Problem Challenge 1 - Evaluate Expression (hard) *
 - Problem Challenge 2 - Structurally Unique Binary Search Trees (hard) *
