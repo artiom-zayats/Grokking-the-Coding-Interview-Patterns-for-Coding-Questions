@@ -85,10 +85,10 @@
 - Find the Median of a Number Stream (medium) - done
 - Sliding Window Median (hard) * - done
 - Maximize Capital (hard) * - done (greedy)
-- Problem Challenge 1 - Next Interval (hard) - working
+- Problem Challenge 1 - Next Interval (hard) - done
 
 ## 10. Pattern: Subsets
-- Subsets (easy)
+- Subsets (easy) - working
 - Subsets With Duplicates (easy) *
 - Permutations (medium) *
 - String Permutations by changing case (medium)
