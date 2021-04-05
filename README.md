@@ -92,10 +92,10 @@
 - Subsets With Duplicates (easy) * - done
 - Permutations (medium) * - done
 - String Permutations by changing case (medium) - done
-- Balanced Parentheses (hard) * - working
-- Unique Generalized Abbreviations (hard) * 
-- Problem Challenge 1 - Evaluate Expression (hard) *
-- Problem Challenge 2 - Structurally Unique Binary Search Trees (hard) *
+- Balanced Parentheses (hard) * - done
+- Unique Generalized Abbreviations (hard) * - [no leetcode]
+- Problem Challenge 1 - Evaluate Expression (hard) * - [no leetcode]
+- Problem Challenge 2 - Structurally Unique Binary Search Trees (hard) *  
 - Problem Challenge 3 - Count of Structurally Unique Binary Search Trees (hard)
 
 ## 11. Pattern: Modified Binary Search
