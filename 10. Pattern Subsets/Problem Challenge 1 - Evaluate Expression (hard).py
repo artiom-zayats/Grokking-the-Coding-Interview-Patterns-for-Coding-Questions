@@ -18,6 +18,27 @@ Input: "2*3-4-5"
 Output: 8, -12, 7, -7, -3 
 Explanation: 2*(3-(4-5)) => 8, 2*(3-4-5) => -12, 2*3-(4-5) => 7, 2*(3-4)-5 => -7, (2*3)-4-5 => -3
 '''
+#mycode2
+def diff_ways_to_evaluate_expression(input):
+  result = []
+  # TODO: Write your code here
+
+
+
+  return result
+
+
+def main():
+
+  print("Expression evaluations: " +
+        str(diff_ways_to_evaluate_expression("1+2*3")))
+
+  print("Expression evaluations: " +
+        str(diff_ways_to_evaluate_expression("2*3-4-5")))
+
+
+main()
+
 
 #mycode
 def diff_ways_to_evaluate_expression(input):
