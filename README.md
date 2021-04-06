@@ -93,7 +93,7 @@
 - Permutations (medium) * - done
 - String Permutations by changing case (medium) - done
 - Balanced Parentheses (hard) * - done
-- Unique Generalized Abbreviations (hard) * - [no leetcode]
+- Unique Generalized Abbreviations (hard) * - [no leetcode] - done / return
 - Problem Challenge 1 - Evaluate Expression (hard) * - [no leetcode]
 - Problem Challenge 2 - Structurally Unique Binary Search Trees (hard) *  
 - Problem Challenge 3 - Count of Structurally Unique Binary Search Trees (hard)
