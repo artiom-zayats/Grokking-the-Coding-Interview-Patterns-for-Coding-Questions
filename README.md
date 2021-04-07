@@ -99,8 +99,8 @@
 - Problem Challenge 3 - Count of Structurally Unique Binary Search Trees (hard) - done
 
 ## 11. Pattern: Modified Binary Search
-- Order-agnostic Binary Search (easy)
-- Ceiling of a Number (medium) *
+- Order-agnostic Binary Search (easy) - done
+- Ceiling of a Number (medium) * 
 - Next Letter (medium)
 - Number Range (medium) *
 - Search in a Sorted Infinite Array (medium) *

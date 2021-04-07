@@ -24,7 +24,49 @@ Example 4:
 Input: [10, 6, 4], key = 4
 Output: 2
 '''
+#mycode
+def binary_search(arr, key):
+  # TODO: Write your code here
+  if arr[0] <= arr[-1]:
+    isUp = True
+  else:
+    isUp = False
+  
+  l = 0
+  r = len(arr) -1 
 
+  while l <= r:
+    mid = (l + r)//2
+
+    if arr[mid] == key:
+      return mid
+    if arr[mid] < key:
+      if isUp:
+        l = mid + 1
+      else:
+        r = mid -1
+    else:
+      if isUp:
+        r = mid -1
+      else:
+        l = mid + 1
+  return -1
+
+
+
+  return -1
+
+def main():
+  print("mine")
+  print(binary_search([4, 6, 10], 10))
+  print(binary_search([1, 2, 3, 4, 5, 6, 7], 5))
+  print(binary_search([1, 2, 3, 4,4,5, 5, 6, 7], 9))
+  print(binary_search([10, 6, 4], 10))
+  print(binary_search([10, 6, 4], 4))
+  print(binary_search([10, 6, 4], 5))
+
+
+main()
 
 #mycode
 def binary_search(arr, key):
@@ -61,10 +103,14 @@ def binary_search(arr, key):
   return -1
 
 def main():
+  print("corect")
   print(binary_search([4, 6, 10], 10))
   print(binary_search([1, 2, 3, 4, 5, 6, 7], 5))
+  print(binary_search([1, 2, 3, 4,4,5, 5, 6, 7], 9))
   print(binary_search([10, 6, 4], 10))
   print(binary_search([10, 6, 4], 4))
+  print(binary_search([10, 6, 4], 5))
+
 
 
 main()
@@ -96,10 +142,14 @@ def binary_search(arr, key):
 
 
 def main():
+  print("correct2")
   print(binary_search([4, 6, 10], 10))
   print(binary_search([1, 2, 3, 4, 5, 6, 7], 5))
+  print(binary_search([1, 2, 3, 4,4,5, 5, 6, 7], 9))
   print(binary_search([10, 6, 4], 10))
   print(binary_search([10, 6, 4], 4))
+  print(binary_search([10, 6, 4], 5))
+
 
 
 main()
