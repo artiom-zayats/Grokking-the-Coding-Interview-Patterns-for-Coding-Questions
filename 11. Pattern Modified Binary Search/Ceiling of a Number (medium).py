@@ -29,8 +29,25 @@ Output: 0
 Explanation: The smallest number greater than or equal to '-1' is '4' having index '0'.
 '''
 
+def search_ceiling_of_a_number(arr,key):
+  l = 0
+  r = len(arr) - 1
+
+  if arr[-1] < key:
+    return -1
+
+  while l<=r:
+    mid = (l+r)//2
+    if arr[mid] == key:
+      return mid
+    if arr[mid] < key:
+      l = mid + 1
+    else:
+      r = mid - 1
+
+  return l
 #mycode
-def search_ceiling_of_a_number(arr, key):
+def search_ceiling_of_a_number2(arr, key):
   # TODO: Write your code here
   start, end = 0, len(arr)-1
 
@@ -52,10 +69,12 @@ def search_ceiling_of_a_number(arr, key):
   return start
 
 def main():
+  print("*"*50)
   print(search_ceiling_of_a_number([4, 6, 10], 6))
   print(search_ceiling_of_a_number([1, 3, 8, 10, 15], 12))
   print(search_ceiling_of_a_number([4, 6, 10], 17))
   print(search_ceiling_of_a_number([4, 6, 10], -1))
+  print("*"*50)
 
 
 main()
@@ -85,10 +104,12 @@ def search_ceiling_of_a_number(arr, key):
 
 
 def main():
+  print("*"*50)
   print(search_ceiling_of_a_number([4, 6, 10], 6))
   print(search_ceiling_of_a_number([1, 3, 8, 10, 15], 12))
   print(search_ceiling_of_a_number([4, 6, 10], 17))
   print(search_ceiling_of_a_number([4, 6, 10], -1))
+  print("*"*50)
 
 
 main()
@@ -158,10 +179,12 @@ def search_floor_of_a_number(arr, key):
 
 
 def main():
+  print("*"*50)
   print(search_floor_of_a_number([4, 6, 10], 6))
   print(search_floor_of_a_number([1, 3, 8, 10, 15], 12))
   print(search_floor_of_a_number([4, 6, 10], 17))
   print(search_floor_of_a_number([4, 6, 10], -1))
+  print("*"*50)
 
 
 main()
