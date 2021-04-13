@@ -101,8 +101,8 @@
 ## 11. Pattern: Modified Binary Search
 - Order-agnostic Binary Search (easy) - done
 - Ceiling of a Number (medium) * - [not on leetcode] - done
-- Next Letter (medium) - working
-- Number Range (medium) *
+- Next Letter (medium) - done
+- Number Range (medium) * - working
 - Search in a Sorted Infinite Array (medium) *
 - Minimum Difference Element (medium)
 - Bitonic Array Maximum (easy)
