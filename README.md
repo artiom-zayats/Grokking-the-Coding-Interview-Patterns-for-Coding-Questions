@@ -112,9 +112,9 @@
 
 ## 12. Pattern: Bitwise XOR
 - Single Number (easy) - check leetcode
-- Two Single Numbers (medium) *
-- Complement of Base 10 Number (medium)
-- Problem Challenge 1
+- Two Single Numbers (medium) * - done / but so so
+- Complement of Base 10 Number (medium) -  done
+- Problem Challenge 1 - done
 
 ## 13. Pattern Top 'K' Elements
 - Top 'K' Numbers (easy)
