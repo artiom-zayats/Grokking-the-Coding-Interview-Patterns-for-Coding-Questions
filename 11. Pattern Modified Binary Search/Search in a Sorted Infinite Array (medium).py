@@ -39,6 +39,10 @@ Explanation: The key is not present in the array.
 import math
 
 
+
+
+
+
 class ArrayReader:
 
   def __init__(self, arr):
@@ -49,8 +53,27 @@ class ArrayReader:
       return math.inf
     return self.arr[index]
 
-
 def search_in_infinite_array(reader, key):
+  # TODO: Write your code here
+  l,r = 0,1
+
+  while reader.get(r) < key:
+    l = r
+    r = r*2
+
+  print(f"ragne:{l},{r}")
+  while l<=r:
+    mid = (l+r)//2
+    if reader.get(mid) == key:
+      return mid
+    if reader.get(mid) < key:
+      l=mid+1
+    else:
+      r = mid-1
+
+  return -1
+
+def search_in_infinite_array2(reader, key):
   # TODO: Write your code here 
   n = len(reader.arr)
   start, end = 0, n-1

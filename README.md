@@ -102,13 +102,13 @@
 - Order-agnostic Binary Search (easy) - done
 - Ceiling of a Number (medium) * - [not on leetcode] - done
 - Next Letter (medium) - done
-- Number Range (medium) * - working
-- Search in a Sorted Infinite Array (medium) *
-- Minimum Difference Element (medium)
-- Bitonic Array Maximum (easy)
-- Problem Challenge 1 - Search Bitonic Array (medium)
-- Problem Challenge 2 - Search in Rotated Array (medium) * 
-- Problem Challenge 3 - Rotation Count (medium) *
+- Number Range (medium) * - done
+- Search in a Sorted Infinite Array (medium) * - done
+- Minimum Difference Element (medium) - done
+- Bitonic Array Maximum (easy)  - done
+- Problem Challenge 1 - Search Bitonic Array (medium) - done
+- Problem Challenge 2 - Search in Rotated Array (medium) * - done
+- Problem Challenge 3 - Rotation Count (medium) * - done
 
 ## 12. Pattern: Bitwise XOR
 - Single Number (easy)

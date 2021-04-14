@@ -29,8 +29,52 @@ Output: 0
 '''
 
 
-#mycode
 def search_bitonic_array(arr, key):
+  #TODO: Write your code here
+  #1 option find pivot:
+  #search part1 + search part2
+
+  def find_max(arr):
+    l,r = 0,len(arr)-1
+    while l<r:
+      mid = (l+r)//2
+      if arr[mid] < arr[mid+1]:
+        l = mid +1
+      else:
+        r = mid
+    return l
+
+  def binary_search(arr,l,r,key):
+    isIncreasing = arr[l]<arr[r]
+    while l <= r:
+      mid = (l+r)//2
+      if arr[mid] == key:
+        return mid
+      if arr[mid] < key:
+        if isIncreasing:
+          l = mid +1
+        else:
+          r = mid -1
+      else:
+        if isIncreasing:
+          r = mid -1
+        else:
+          l = mid +1
+    return -1
+
+  ix = find_max(arr)
+
+  ans =  binary_search(arr,0,ix,key)
+  if ans != -1:
+    return ans
+  else:
+    return  binary_search(arr,ix,len(arr)-1,key)
+
+
+  return -1
+
+#mycode
+def search_bitonic_array2(arr, key):
   # TODO: Write your code here
   maxIndex = search_maximum(arr)
   if key > arr[maxIndex]:

@@ -25,8 +25,23 @@ Output: 0
 Explanation: The array has been not been rotated.
 '''
 
-#mycode
 def count_rotations(arr):
+  #find location of minimum
+  l = 0
+  r = len(arr)-1
+
+  while l<r:
+    mid = (l+r)//2
+    if arr[l]<= arr[r]: #sorted array
+      break
+    if arr[l] <= arr[mid]: #left side is sorted
+      l = mid + 1
+    else:
+      r = mid
+  return l
+
+#mycode
+def count_rotations2(arr):
   # TODO: Write your code here
   start, end = 0, len(arr) - 1
   while start <= end:
@@ -47,9 +62,11 @@ def count_rotations(arr):
     
 
 def main():
+  print("****")
   print(count_rotations([10, 15, 1, 3, 8]))
   print(count_rotations([4, 5, 7, 9, 10, -1, 2]))
   print(count_rotations([1, 3, 8, 10]))
+  print("****")
 
 
 main()

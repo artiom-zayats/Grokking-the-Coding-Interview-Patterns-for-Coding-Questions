@@ -28,6 +28,24 @@ Output: 10
 #mycode
 
 def search_min_diff_element(arr, key):
+  #TODO my code
+  l,r = 0,len(arr)-1
+  mn = (float("inf"),-1)
+  while l<=r:
+    mid = (l+r)//2
+    diff = arr[mid]-key
+    if abs(diff) < mn[0]:
+      mn = abs(diff),mid
+    if diff == 0:
+      break
+    if diff < 0 :
+      l = mid +1
+    else:
+      r = mid - 1
+
+  return arr[mn[1]]
+
+def search_min_diff_element2(arr, key):
   # TODO: Write your code here
   if key <= arr[0]:
     return arr[0]
@@ -54,10 +72,14 @@ def search_min_diff_element(arr, key):
 
 
 def main():
+  print("minde")
   print(search_min_diff_element([4, 6, 10], 7))
   print(search_min_diff_element([4, 6, 10], 4))
   print(search_min_diff_element([1, 3, 8, 10, 15], 12))
   print(search_min_diff_element([4, 6, 10], 17))
+  print(search_min_diff_element(sorted([-1, -3, -8, -10, -15]), 12))
+  print(search_min_diff_element(sorted([1, 3, 8, 10, 15]), -12))
+
 
 
 main()
@@ -90,10 +112,13 @@ def search_min_diff_element(arr, key):
 
 
 def main():
+  print("corect")
   print(search_min_diff_element([4, 6, 10], 7))
   print(search_min_diff_element([4, 6, 10], 4))
   print(search_min_diff_element([1, 3, 8, 10, 15], 12))
   print(search_min_diff_element([4, 6, 10], 17))
+  print(search_min_diff_element(sorted([-1, -3, -8, -10, -15]), 12))
+  print(search_min_diff_element(sorted([1, 3, 8, 10, 15]), -12))
 
 
 main()
