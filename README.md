@@ -111,7 +111,7 @@
 - Problem Challenge 3 - Rotation Count (medium) * - done
 
 ## 12. Pattern: Bitwise XOR
-- Single Number (easy)
+- Single Number (easy) - check leetcode
 - Two Single Numbers (medium) *
 - Complement of Base 10 Number (medium)
 - Problem Challenge 1
