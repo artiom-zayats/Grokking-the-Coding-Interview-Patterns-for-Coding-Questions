@@ -16,10 +16,36 @@ Output: [12, 11, 12]
 
 
 #mycode
-from heapq import *
+from heapq import heappush,heappop,heapreplace
 
 
 def find_k_largest_numbers(nums, k):
+  def heap_option(nums,k):
+    heap = []
+    ans = []
+    for x in nums:
+      heappush(heap,-x)
+    for i in range(k):
+      ans.append(-heappop(heap))
+    return ans
+
+  def heap_options_2(nums,k):
+    heap = []
+    for x in nums:
+      if len(heap) < k:
+        heappush(heap,x)
+      else:
+        heapreplace(heap,x)
+    return heap
+
+
+
+
+  result = heap_options_2(nums,k)
+
+  return result
+
+def find_k_largest_numbers2(nums, k):
   result = []
   # TODO: Write your code here
   

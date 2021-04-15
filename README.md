@@ -117,13 +117,13 @@
 - Problem Challenge 1 - done
 
 ## 13. Pattern Top 'K' Elements
-- Top 'K' Numbers (easy)
-- Kth Smallest Number (easy)
-- 'K' Closest Points to the Origin (easy)
-- Connect Ropes (easy) *
-- Top 'K' Frequent Numbers (medium)
-- Frequency Sort (medium) *
-- Kth Largest Number in a Stream (medium)
+- Top 'K' Numbers (easy) - done
+- Kth Smallest Number (easy) - done
+- 'K' Closest Points to the Origin (easy) - done
+- Connect Ropes (easy) * - done
+- Top 'K' Frequent Numbers (medium) - done
+- Frequency Sort (medium) * - done
+- Kth Largest Number in a Stream (medium) - 
 - 'K' Closest Numbers (medium)
 - Maximum Distinct Elements (medium)
 - Sum of Elements (medium) 

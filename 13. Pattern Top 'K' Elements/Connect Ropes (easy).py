@@ -25,6 +25,18 @@ Explanation: First connect 1+2(=3), then 3+3(=6), 6+5(=11), 11+11(=22). Total co
 from heapq import *
 
 def minimum_cost_to_connect_ropes(ropeLengths):
+  heapify(ropeLengths)
+  cost = 0
+  while len(ropeLengths) > 1:
+    r1 = heappop(ropeLengths)
+    r2 = heappop(ropeLengths)
+    cost += (r1+r2)
+    heappush(ropeLengths,(r1+r2))
+
+
+  return cost
+
+def minimum_cost_to_connect_ropes2(ropeLengths):
   result = []
   # TODO: Write your code here
   for i in ropeLengths:
@@ -46,6 +58,8 @@ def main():
         str(minimum_cost_to_connect_ropes([3, 4, 5, 6])))
   print("Minimum cost to connect ropes: " +
         str(minimum_cost_to_connect_ropes([1, 3, 11, 5, 2])))
+  print("Minimum cost to connect ropes: " +
+        str(minimum_cost_to_connect_ropes([1, 3, 11, 5, 2,24])))
 
 
 main()
@@ -82,6 +96,8 @@ def main():
         str(minimum_cost_to_connect_ropes([3, 4, 5, 6])))
   print("Minimum cost to connect ropes: " +
         str(minimum_cost_to_connect_ropes([1, 3, 11, 5, 2])))
+  print("Minimum cost to connect ropes: " +
+        str(minimum_cost_to_connect_ropes([1, 3, 11, 5, 2,24])))
 
 main()
 
