@@ -123,7 +123,7 @@
 - Connect Ropes (easy) * - done
 - Top 'K' Frequent Numbers (medium) - done
 - Frequency Sort (medium) * - done
-- Kth Largest Number in a Stream (medium) - 
+- Kth Largest Number in a Stream (medium) - done
 - 'K' Closest Numbers (medium)
 - Maximum Distinct Elements (medium)
 - Sum of Elements (medium) 
