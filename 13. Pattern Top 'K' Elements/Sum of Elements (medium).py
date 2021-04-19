@@ -21,7 +21,25 @@ number (8) is 12 (5+7).
 #mycode
 from heapq import *
 
+
 def find_sum_of_elements(nums, k1, k2):
+  # TODO: Write your code here
+  result = 0
+  heap = []
+  for x in nums:
+    heappush(heap,x)
+
+  for _ in range(k1):
+    heappop(heap)
+
+  for _ in range(k1+1,k2):
+    result+=heappop(heap)
+
+
+  return result
+
+
+def find_sum_of_elements2(nums, k1, k2):
   # TODO: Write your code here
   temp = []
   for num in nums:

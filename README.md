@@ -124,11 +124,11 @@
 - Top 'K' Frequent Numbers (medium) - done
 - Frequency Sort (medium) * - done
 - Kth Largest Number in a Stream (medium) - done
-- 'K' Closest Numbers (medium)
-- Maximum Distinct Elements (medium)
-- Sum of Elements (medium) 
+- 'K' Closest Numbers (medium) - done
+- Maximum Distinct Elements (medium) -done
+- Sum of Elements (medium) - done
 - Rearrange String (hard)
-- Problem Challenge 1 - Rearrange String K Distance Apart (hard) 
+- Problem Challenge 1 - Rearrange String K Distance Apart (hard) - not on leetcode (premium)
 - Problem Challenge 2 - Scheduling Tasks (hard) *
 - Problem Challenge 3 - Frequency Stack (hard) 
 
