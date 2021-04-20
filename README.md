@@ -127,8 +127,8 @@
 - 'K' Closest Numbers (medium) - done
 - Maximum Distinct Elements (medium) -done
 - Sum of Elements (medium) - done
-- Rearrange String (hard)
-- Problem Challenge 1 - Rearrange String K Distance Apart (hard) - not on leetcode (premium)
+- Rearrange String (hard) - done 
+- Problem Challenge 1 - Rearrange String K Distance Apart (hard) - not on leetcode (premium) - done
 - Problem Challenge 2 - Scheduling Tasks (hard) *
 - Problem Challenge 3 - Frequency Stack (hard) 
 

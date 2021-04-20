@@ -31,7 +31,39 @@ Explanation: We cannot find an arrangement of the string where any two 'a' are 3
 from heapq import *
 from collections import deque
 
-def reorganize_string(str, k):
+
+def reorganize_string(S, k):
+  # TODO: Write your code here
+
+  charFrequencyMap = {}
+  for char in S:
+    charFrequencyMap[char] = charFrequencyMap.get(char, 0) + 1
+
+  for char in charFrequencyMap.keys():
+    n = charFrequencyMap[char]
+    if n+(n-1)*(k-1) > len(S):
+      return ""
+
+  que = deque()
+  heap = [(-freq,char) for char,freq in charFrequencyMap.items()]
+  heapify(heap)
+
+  ans = []
+  while heap:
+    freq,char = heappop(heap)
+    freq+=1
+    que.append((freq,char))
+    ans.append(char)
+
+    if len(que) == k:
+      freq,char = que.popleft()
+      if freq != 0:
+        heappush(heap,(freq,char))
+
+
+  return "".join(ans)
+
+def reorganize_string2(str, k):
   # TODO: Write your code here
   mapping = {}
 
