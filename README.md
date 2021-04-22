@@ -133,10 +133,10 @@
 - Problem Challenge 3 - Frequency Stack (hard) - done
 
 ## 14. Pattern: K-way merge
-- Merge K Sorted Lists (medium) *
-- Kth Smallest Number in M Sorted Lists (Medium) 
-- Kth Smallest Number in a Sorted Matrix (Hard) *
-- Smallest Number Range (Hard) *
+- Merge K Sorted Lists (medium) * - done
+- Kth Smallest Number in M Sorted Lists (Medium)  - done
+- Kth Smallest Number in a Sorted Matrix (Hard) * - done soso
+- Smallest Number Range (Hard) * - done
 - Problem Challenge 1 - K Pairs with Largest Sums (Hard) 
 
 ## 15. Pattern : 0/1 Knapsack (Dynamic Programming)

@@ -19,7 +19,29 @@ Explanation: The 3rd smallest number among all the arrays is 7.
 #mycode
 from heapq import *
 
+
 def find_Kth_smallest(lists, k):
+  number = -1
+  # TODO: Write your code here
+  result = 0
+
+  heap = []
+
+  for i in range(len(lists)):
+      heappush(heap,(lists[i][0],0,i))
+
+  count = 0
+  while heap:
+    count += 1
+    el,ix,list_ix = heappop(heap)
+    if count == k:
+      break
+    if len(lists[list_ix]) > ix + 1:
+      heappush(heap,(lists[list_ix][ix+1],ix+1,list_ix))
+
+
+  return el
+def find_Kth_smallest2(lists, k):
   number = -1
   # TODO: Write your code here
   result = []
@@ -39,6 +61,10 @@ def find_Kth_smallest(lists, k):
 def main():
   print("Kth smallest number is: " +
         str(find_Kth_smallest([[2, 6, 8], [3, 6, 7], [1, 3, 4]], 5)))
+  print("Kth smallest number is: " +
+        str(find_Kth_smallest([[2, 6, 8], [3, 6, 7], [1, 3, 4]], 3)))
+  print("Kth smallest number is: " +
+        str(find_Kth_smallest([[2, 6, 8], [3, 6, 7], [1, 3, 4,8]], 6)))
 
 
 main()
@@ -73,7 +99,10 @@ def find_Kth_smallest(lists, k):
 def main():
   print("Kth smallest number is: " +
         str(find_Kth_smallest([[2, 6, 8], [3, 6, 7], [1, 3, 4]], 5)))
-
+  print("Kth smallest number is: " +
+        str(find_Kth_smallest([[2, 6, 8], [3, 6, 7], [1, 3, 4]], 3)))
+  print("Kth smallest number is: " +
+        str(find_Kth_smallest([[2, 6, 8], [3, 6, 7], [1, 3, 4,8]], 6)))
 
 main()
 

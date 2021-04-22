@@ -20,6 +20,9 @@ from heapq import *
 import math
 
 def find_smallest_range(lists):
+  return []
+
+def find_smallest_range2(lists):
   # TODO: Write your code here
   heap = []
   start, end = -math.inf, math.inf
@@ -45,6 +48,8 @@ def find_smallest_range(lists):
 def main():
   print("Smallest range is: " +
         str(find_smallest_range([[1, 5, 8], [4, 12], [7, 8, 10]])))
+  print("Smallest range is: " +
+        str(find_smallest_range([[1,9], [4, 12], [7, 8, 10]])))
 
 
 main()
@@ -85,6 +90,9 @@ def find_smallest_range(lists):
 def main():
   print("Smallest range is: " +
         str(find_smallest_range([[1, 5, 8], [4, 12], [7, 8, 10]])))
+  print("Smallest range is: " +
+        str(find_smallest_range([[1,9], [4, 12], [7, 8, 10]])))
+
 
 
 main()
