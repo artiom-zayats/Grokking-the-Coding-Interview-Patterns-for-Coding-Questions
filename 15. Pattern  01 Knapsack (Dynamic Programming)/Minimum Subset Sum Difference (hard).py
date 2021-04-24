@@ -21,6 +21,15 @@ Explanation: We can partition the given set into two subsets where minimum absol
 between the sum of numbers is '92'. Here are the two subsets: {1, 3, 4} & {100}.
 '''
 
+from copy import deepcopy
+
+#Mine naive
+
+
+"""
+ANS
+"""
+
 #Basic Solution
 def can_partition(num):
   return can_partition_recursive(num, 0, 0, 0)

@@ -48,8 +48,10 @@ def knapsack_recursive(profits, weights, capacity, currentIndex):
 
 
 def main():
-  print(solve_knapsack([1, 6, 10, 16], [1, 2, 3, 5], 7))
+  print("*"*50)
+  print(solve_knapsack([1, 6, 10, 16], [1, 2, 3, 5], 5))
   print(solve_knapsack([1, 6, 10, 16], [1, 2, 3, 5], 6))
+  print(solve_knapsack([1, 6, 10, 16], [1, 2, 3, 5], 7))
 
 
 main()
@@ -103,8 +105,10 @@ def knapsack_recursive(dp, profits, weights, capacity, currentIndex):
 
 
 def main():
-  print(solve_knapsack([1, 6, 10, 16], [1, 2, 3, 5], 7))
+  print("*"*50)
+  print(solve_knapsack([1, 6, 10, 16], [1, 2, 3, 5], 5))
   print(solve_knapsack([1, 6, 10, 16], [1, 2, 3, 5], 6))
+  print(solve_knapsack([1, 6, 10, 16], [1, 2, 3, 5], 7))
 
 
 main()
@@ -157,6 +161,7 @@ def solve_knapsack(profits, weights, capacity):
 
 
 def main():
+  print("*"*50)
   print(solve_knapsack([1, 6, 10, 16], [1, 2, 3, 5], 5))
   print(solve_knapsack([1, 6, 10, 16], [1, 2, 3, 5], 6))
   print(solve_knapsack([1, 6, 10, 16], [1, 2, 3, 5], 7))
@@ -201,10 +206,10 @@ def solve_knapsack(profits, weights, capacity):
 
 
 def main():
-  print("Total knapsack profit: " +
-        str(solve_knapsack([1, 6, 10, 16], [1, 2, 3, 5], 7)))
-  print("Total knapsack profit: " +
-        str(solve_knapsack([1, 6, 10, 16], [1, 2, 3, 5], 6)))
+  print("*"*50)
+  print(solve_knapsack([1, 6, 10, 16], [1, 2, 3, 5], 5))
+  print(solve_knapsack([1, 6, 10, 16], [1, 2, 3, 5], 6))
+  print(solve_knapsack([1, 6, 10, 16], [1, 2, 3, 5], 7))
 
 
 main()

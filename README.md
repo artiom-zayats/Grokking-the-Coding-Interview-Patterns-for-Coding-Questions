@@ -137,12 +137,12 @@
 - Kth Smallest Number in M Sorted Lists (Medium)  - done
 - Kth Smallest Number in a Sorted Matrix (Hard) * - done soso
 - Smallest Number Range (Hard) * - done
-- Problem Challenge 1 - K Pairs with Largest Sums (Hard) 
+- Problem Challenge 1 - K Pairs with Largest Sums (Hard) - done
 
 ## 15. Pattern : 0/1 Knapsack (Dynamic Programming)
-- 0/1 Knapsack (medium)
-- Equal Subset Sum Partition (medium) *
-- Subset Sum (medium)
+- 0/1 Knapsack (medium) - done
+- Equal Subset Sum Partition (medium) * - done
+- Subset Sum (medium) - done
 - Minimum Subset Sum Difference (hard) *
 - Problem Challenge 1 - Count of Subset Sum (hard) 
 - Problem Challenge 2 - Target Sum (hard) 

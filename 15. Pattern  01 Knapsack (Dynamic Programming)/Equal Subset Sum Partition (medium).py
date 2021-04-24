@@ -15,6 +15,42 @@ Output: True
 Explanation: The given set can be partitioned into two subsets with equal sum: {1, 3, 4} & {1, 7}
 '''
 
+#my recursive
+def can_partition_1(num):
+  def rec(nums1,nums2):
+    print(nums1,sum(nums1),nums2,sum(nums2))
+    if sum(nums1) == sum(nums2):
+      return True
+
+    for i in range(len(nums1)):
+      n1 = nums1[:i] + nums1[i+1:]
+      n2 = nums2 + [nums1[i]]
+      if rec(n1,n2):
+        return True
+    return False
+  ans = rec(num,[])
+
+
+
+
+
+  return ans
+
+
+
+
+def main():
+  print("Mine")
+  print("--"*40)
+  print("Can partition: " + str(can_partition_1([1, 2, 3, 4])))
+  print("Can partition: " + str(can_partition_1([1, 1, 3, 4, 7])))
+  print("Can partition: " + str(can_partition_1([2, 3, 4, 6])))
+  print("--"*40)
+
+
+main()
+
+
 
 #my Top-down code
 def can_partition(num):
@@ -259,6 +295,7 @@ def can_partition(num):
 
 
 def main():
+  print("---correct----")
   print("Can partition: " + str(can_partition([1, 2, 3, 4])))
   print("Can partition: " + str(can_partition([1, 1, 3, 4, 7])))
   print("Can partition: " + str(can_partition([2, 3, 4, 6])))
