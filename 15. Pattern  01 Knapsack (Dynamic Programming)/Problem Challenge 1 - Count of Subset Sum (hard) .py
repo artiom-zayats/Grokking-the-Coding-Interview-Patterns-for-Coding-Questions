@@ -15,34 +15,6 @@ Output: 3
 The given set has '3' subsets whose sum is '9': {2, 7}, {1, 7, 1}, {1, 2, 1, 5}
 '''
 
-def count_subsets(num, sum):
-  #TODO: Write - Your - Code
-  dp = [[0 for i in range(sum+1)]  for j in range(len(num))]
-
-  for i in range(len(num)):
-    dp[i][0] = 1
-  
-  for i in range(sum+1):
-    if i == num[0]:
-      dp[0][i] = 1
-  
-  for i in range(1,len(num)):
-    for j in range(1,sum+1):
-      dp[i][j] += dp[i-1][j]
-      if num[i] <= j:
-        dp[i][j] += dp[i-1][j-num[i]]
-
-  return dp[len(num)-1][sum]
-
-
-def main():
-  print("Total number of subsets " + str(count_subsets([1, 1, 2, 3], 4)))
-  print("Total number of subsets: " + str(count_subsets([1, 2, 7, 1, 5], 9)))
-
-
-main()
-
-
 
 
 #Basic Solution
@@ -85,36 +57,39 @@ main()
 def count_subsets(num, sum):
   # create a two dimensional array for Memoization, each element is initialized to '-1'
   dp = [[-1 for x in range(sum+1)] for y in range(len(num))]
-  return count_subsets_recursive(dp, num, sum, 0)
+  
 
 
-def count_subsets_recursive(dp, num, sum, currentIndex):
-  # base checks
-  if sum == 0:
-    return 1
+  def count_subsets_rec(dp, num, sum, currentIndex):
+    # base checks
+    if sum == 0:
+      return 1
 
-  n = len(num)
-  if n == 0 or currentIndex >= n:
-    return 0
+    n = len(num)
+    if n == 0 or currentIndex >= n:
+      return 0
 
-  # check if we have not already processed a similar problem
-  if dp[currentIndex][sum] == -1:
-    # recursive call after choosing the number at the currentIndex
-    # if the number at currentIndex exceeds the sum, we shouldn't process this
-    sum1 = 0
-    if num[currentIndex] <= sum:
-      sum1 = count_subsets_recursive(
-        dp, num, sum - num[currentIndex], currentIndex + 1)
+    # check if we have not already processed a similar problem
+    if dp[currentIndex][sum] == -1:
+      # recursive call after choosing the number at the currentIndex
+      # if the number at currentIndex exceeds the sum, we shouldn't process this
+      sum1 = 0
+      if num[currentIndex] <= sum:
+        sum1 = count_subsets_rec(
+          dp, num, sum - num[currentIndex], currentIndex + 1)
 
-    # recursive call after excluding the number at the currentIndex
-    sum2 = count_subsets_recursive(dp, num, sum, currentIndex + 1)
+      # recursive call after excluding the number at the currentIndex
+      sum2 = count_subsets_rec(dp, num, sum, currentIndex + 1)
 
-    dp[currentIndex][sum] = sum1 + sum2
+      dp[currentIndex][sum] = sum1 + sum2
 
-  return dp[currentIndex][sum]
+    return dp[currentIndex][sum]
+
+  return count_subsets_rec(dp, num, sum, 0)
 
 
 def main():
+  print ("haha")
   print("Total number of subsets " + str(count_subsets([1, 1, 2, 3], 4)))
   print("Total number of subsets: " + str(count_subsets([1, 2, 7, 1, 5], 9)))
 
@@ -122,7 +97,37 @@ def main():
 main()
 
 
+def count_subsets(num, target):
+  dp = [[-1 for _ in range(target+1)] for _ in range(len(num))]
+  def dfs(ix,sm):
+    if sm ==  0:
+      return 1
 
+    if ix >= len(num):
+      return 0
+
+    
+    if dp[ix][sm] == -1:
+      sum2 = 0
+      if num[ix] <= sm:
+        sum2 = dfs(ix+1,sm-num[ix])
+      sum1 = dfs(ix+1,sm)
+      dp[ix][sm] = sum1+sum2
+
+    return dp[ix][sm]
+
+  
+  return dfs(0,target)
+
+
+
+def main():
+  print("****")
+  print("Total number of subsets " + str(count_subsets([1, 1, 2, 3], 4)))
+  print("Total number of subsets: " + str(count_subsets([1, 2, 7, 1, 5], 9)))
+  print("****")
+
+main()
 
 '''
 Time and Space complexity 
