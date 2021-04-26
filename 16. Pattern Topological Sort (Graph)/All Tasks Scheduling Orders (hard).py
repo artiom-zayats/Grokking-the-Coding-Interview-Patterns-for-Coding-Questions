@@ -102,6 +102,7 @@ from collections import deque
 
 
 def print_orders(tasks, prerequisites):
+  ##just a setup
   sortedOrder = []
   if tasks <= 0:
     return False

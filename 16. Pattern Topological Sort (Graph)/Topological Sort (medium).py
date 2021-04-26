@@ -44,30 +44,37 @@ from collections import deque
 def topological_sort(vertices, edges):
   sortedOrder = []
   # TODO: Write your code here
-  inDegree={i:0 for i in range(vertices)}
+
+  inDegree = {i:0 for i in range(vertices)}
   graph = {i:[] for i in range(vertices)}
 
   for edge in edges:
-    in_node, out_node = edge[0], edge[1]
-    graph[in_node].append(out_node)
-    inDegree[out_node] += 1
-  
+    #edge = parent -> Child
+    parent,child = edge[0],edge[1]
+    graph[parent].append(child)
+    inDegree[child]+=1
+
   sources = deque()
-  for key in graph:
-    if inDegree[key] == 0:
-      sources.append(key)
-
+  for k,v in inDegree.items():
+    if v == 0:
+      sources.append(k)
+  
   while sources:
-    in_node = sources.popleft()
-    sortedOrder.append(in_node)
+    vertex = sources.popleft()
+    sortedOrder.append(vertex)
+    for child in graph[vertex]:
+      inDegree[child]-=1
+      if inDegree[child] == 0:
+        sources.append(child)
+  
 
-    for i in graph[in_node]:
-        inDegree[i] -= 1
-        if inDegree[i] == 0:
-          sources.append(i)
-          
   if len(sortedOrder) != vertices:
     return []
+
+  return sortedOrder
+
+
+
 
   return sortedOrder
 
@@ -85,10 +92,6 @@ main()
 
 
 
-
-
-#answer
-from collections import deque
 
 
 def topological_sort(vertices, edges):

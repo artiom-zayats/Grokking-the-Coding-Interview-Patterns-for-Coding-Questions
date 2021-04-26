@@ -140,19 +140,19 @@
 - Problem Challenge 1 - K Pairs with Largest Sums (Hard) - done
 
 ## 15. Pattern : 0/1 Knapsack (Dynamic Programming)
-- 0/1 Knapsack (medium) - done
-- Equal Subset Sum Partition (medium) * - done
-- Subset Sum (medium) - done
-- Minimum Subset Sum Difference (hard) *
-- Problem Challenge 1 - Count of Subset Sum (hard) 
-- Problem Challenge 2 - Target Sum (hard) 
+- 0/1 Knapsack (medium) - done? return
+- Equal Subset Sum Partition (medium) * - done - soso
+- Subset Sum (medium) -done
+- Minimum Subset Sum Difference (hard) * - done
+- Problem Challenge 1 - Count of Subset Sum (hard) - done
+- Problem Challenge 2 - Target Sum (hard) - done
 
 
 ## 16. Pattern: Topological Sort (Graph)
-- Topological Sort (medium) *
-- Tasks Scheduling (medium)
-- Tasks Scheduling Order (medium)
-- All Tasks Scheduling Orders (hard) *
+- Topological Sort (medium) * - done
+- Tasks Scheduling (medium) - done
+- Tasks Scheduling Order (medium) - done
+- All Tasks Scheduling Orders (hard) * - hmm
 - Alien Dictionary (hard) 
 - Problem Challenge 1 - Reconstructing a Sequence (hard) *
 - Problem Challenge 2 - Minimum Height Trees (hard) *
