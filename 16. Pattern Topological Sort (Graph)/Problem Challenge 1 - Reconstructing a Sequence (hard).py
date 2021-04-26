@@ -33,6 +33,61 @@ Explanation: The sequences [3, 1, 5] and [1, 4, 2, 5] can uniquely reconstruct
 [3, 1, 4, 2, 5].
 '''
 
+# mycode
+from collections import deque
+
+
+def can_construct(originalSeq, sequences):
+  # TODO: Write your code here
+  inDegree = {}
+  graph = {}
+
+  for sequence in sequences:
+    for i in sequence:
+      inDegree[i] = 0
+      graph[i] = []
+
+  for sequence in sequences:
+    for i in range(1, len(sequence)):
+      start, end = sequence[i - 1], sequence[i]
+      inDegree[end] += 1
+      graph[start].append(end)
+
+  if len(inDegree) != len(originalSeq):
+    return False
+
+  sources = deque()
+  for key in inDegree:
+    if inDegree[key] == 0:
+      sources.append(key)
+
+  sortedOrder = []
+  while sources:
+    if len(sources) != 1:
+      return False
+    if originalSeq[len(sortedOrder)] != sources[0]:
+      return False
+    vertex = sources.popleft()
+    sortedOrder.append(vertex)
+    for i in graph[vertex]:
+      inDegree[i] -= 1
+      if inDegree[i] == 0:
+        sources.append(i)
+
+  return len(sortedOrder) == len(originalSeq)
+
+
+def main():
+  print("Can construct: " +
+        str(can_construct([1, 2, 3, 4], [[1, 2], [2, 3], [3, 4]])))
+  print("Can construct: " +
+        str(can_construct([1, 2, 3, 4], [[1, 2], [2, 3], [2, 4]])))
+  print("Can construct: " +
+        str(can_construct([3, 1, 4, 2, 5], [[3, 1, 5], [1, 4, 2, 5]])))
+
+
+main()
+
 
 #mycode
 from collections import deque

@@ -153,9 +153,9 @@
 - Tasks Scheduling (medium) - done
 - Tasks Scheduling Order (medium) - done
 - All Tasks Scheduling Orders (hard) * - hmm
-- Alien Dictionary (hard) 
-- Problem Challenge 1 - Reconstructing a Sequence (hard) *
-- Problem Challenge 2 - Minimum Height Trees (hard) *
+- Alien Dictionary (hard) - done
+- Problem Challenge 1 - Reconstructing a Sequence (hard) * - done
+- Problem Challenge 2 - Minimum Height Trees (hard) * - done
 
 ## 17. Miscellaneous
 - Kth Smallest Number (hard) *

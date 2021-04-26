@@ -46,39 +46,46 @@ From the above five points, we can conclude that the correct character order is:
 from collections import deque
 
 def find_order(words):
-  # TODO: Write your code here
-  inDegree = {}
+  sorted_order = []
   graph = {}
-  for word in words:
-    for char in word:
-      inDegree[char] = 0
-      graph[char] = []
-  
+  indegree = {}
+
+  for w in words:
+    for l in w:
+      indegree[l] = 0
+      graph[l] = set()
+
+
   for i in range(len(words)-1):
-    word1, word2 = words[i], words[i+1]
-    for j in range(min(len(word1),len(word2))):
-      if word1[j] != word2[j]:
-        inDegree[word2[j]] += 1
-        graph[word1[j]].append(word2[j])
+    l = 0
+    while l < len(words[i]) and l < len(words[i+1]):
+      if words[i][l] != words[i+1][l]:
+        graph[words[i][l]].add(words[i+1][l])
         break
-  
+      l+=1
+
   sources = deque()
-  for key in inDegree:
-    if inDegree[key] == 0:
-      sources.append(key)
-  
-  
-  sortedOrder = []
+  for k in indegree.keys():
+    if indegree[k] == 0:
+      sources.append(k)
+
   while sources:
-    vertex = sources.popleft()
-    sortedOrder.append(vertex)
+    parent = sources.popleft()
+    sorted_order.append(parent)
+    for child in graph[parent]:
+      indegree[child]-=1
+      if indegree[child]==0:
+        sources.append(child)
 
-    for i in graph[vertex]:
-      inDegree[i] -= 1
-      if inDegree[i] == 0:
-        sources.append(i)
 
-  return "".join(sortedOrder)
+
+
+
+
+  return "".join(sorted_order)
+
+
+
 
 
 def main():
